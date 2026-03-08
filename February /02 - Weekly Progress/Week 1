@@ -1,35 +1,35 @@
 # Weekly Progress Summary
 
-**Week:** ___ of ___ | **Dates:** _**/**_/___ to _**/**_/___
+**Week:** 1 | **Dates:** 02/10/2026 to 02/16/2026
 
 ## Weekly Metrics
 
-| Metric                 | Target | Actual | Status |
-| ---------------------- | ------ | ------ | ------ |
-| Training Hours         | 15-20  | _____  | ☐ ✓/✗  |
-| Challenges Solved      | 15-25  | _____  | ☐ ✓/✗  |
-| Live CTF Participated  | 1-2    | _____  | ☐ ✓/✗  |
-| CTF Challenges Solved  | 2-5    | _____  | ☐ ✓/✗  |
-| Writeups Created       | 3-5    | _____  | ☐ ✓/✗  |
-| New Techniques Learned | 2-3    | _____  | ☐ ✓/✗  |
+| Metric                  | Target | Actual | Status |
+| ----------------------- | ------ | ------ | ------ |
+| Training Hours          | 15-20  | 7.5    | ✗      |
+| Challenges Solved       | 15-25  | 10     | ✗      |
+| Live CTF Participated   | 1-2    | 0      | ✗      |
+| CTF Challenges Solved   | 2-5    | 0      | ✗      |
+| Writeups Created        | 3-5    | 3      | ✓      |
+| New Techniques Learned  | 2-3    | 4      | ✓      |
 
 ## Weekly Points Breakdown
 
-| Source               | Points    |
-| -------------------- | --------- |
-| Training Hours       | _____     |
-| Challenges Completed | _____     |
-| Quality Bonuses      | _____     |
-| Live CTF Performance | _____     |
-| Writeups & Learning  | _____     |
-| **Weekly Total**     | **_____** |
+| Source                | Points    |
+| --------------------- | --------- |
+| Training Hours        | 30        |
+| Challenges Completed  | 95        |
+| Quality Bonuses       | 70        |
+| Live CTF Performance  | 0         |
+| Writeups & Learning   | 45        |
+| **Weekly Total** | **240** |
 
 ## Category Distribution (Hours This Week)
 
 ```
 Web Exploitation:     _____ hours [========] ____%
 Binary Exploitation:  _____ hours [========] ____%
-Cryptography:        _____ hours [========] ____%
+Cryptography:        7.5 hours [========] ____%
 Reverse Engineering: _____ hours [========] ____%
 Forensics:           _____ hours [========] ____%
 OSINT:               _____ hours [========] ____%
@@ -37,35 +37,31 @@ OSINT:               _____ hours [========] ____%
 
 ## Skill Level Assessment (Self-Rated 1-10)
 
-| Specialty  | Last Week | This Week | Change |
-| ---------- | --------- | --------- | ------ |
-| Primary #1 | _____     | _____     | _____  |
-| Primary #2 | _____     | _____     | _____  |
-| Secondary  | _____     | _____     | _____  |
+| Specialty          | Last Week | This Week | Change |
+| ------------------ | --------- | --------- | ------ |
+| Cryptography       | 1         | 4         | +3     |
+| Python Scripting   | 1         | 4         | +3     |
+| Encoding/Decoding  | 1         | 4         | +3     |
 
 ## Weekly Achievements
 
-- [ ] Solved first challenge in new category
-- [ ] Completed difficult challenge independently
-- [ ] Helped teammate solve challenge
-- [ ] Found new technique/exploit
-- [ ] Improved solve time by 20%+
+- [x] Solved first challenge in new category
+- [x] Completed difficult challenge independently
+- [x] ] Helped teammate solve challenge
+- [x] Found new technique/exploit
+- [x] Improved solve time by 20%+
 - [ ] Other: _____________________
 
 ## Weekly Challenges & Lessons
 
 **Biggest challenge this week:**
-
----
+The "XOR Properties" challenge. It required moving beyond basic coding to apply mathematical rules like Associativity and the Self-Inverse property to logically cancel out multiple unknown keys.
 
 **How you overcame it (or plan to):**
-
----
+I wrote a Python script to convert the hex strings into integers and performed step-by-step XOR operations (e.g., $key2 = v2 \oplus v1$) until the redundant layers were stripped away, revealing the flag.
 
 **Most valuable lesson learned:**
-
----
+XOR alignment is everything. If your key length (like `bl4ck_k3y`) doesn't match the repeating pattern of the ciphertext exactly, the entire message remains scrambled or throws a decode error.
 
 **Adjustment for next week:**
-
----
+Increase daily consistency to hit the 15-hour training target and begin the Mathematics category to learn the fundamentals of RSA.
