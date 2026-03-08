@@ -1,0 +1,40 @@
+# 📊 Individual Progress Scorecard - Day 3
+
+**Date:** February 12, 2026 | **Training Day:** 3/180
+
+### 1. Time Investment
+- [x] Training time today: 3.0 hours
+- [x] Goal met? Yes
+- [x] Consistency streak: 3 days
+
+**Points:** 10 points
+
+### 2. Challenge Completion
+| Difficulty | Challenges Solved | Points Earned |
+| :--- | :--- | :--- |
+| Medium | 1 (Favourite Byte - Brute Force) | 15 |
+| Hard | 1 (You either know, XOR you don't) | 30 |
+| **Daily Total** | | **45** |
+
+### 3. Quality Indicators
+- [x] Learned new technique/tool: Known Plaintext Attack (KPA) to recover secret keys (+10 pts)
+- [x] Updated cheat sheet: Added `itertools.cycle` for repeating-key XOR scripts (+5 pts)
+- [x] Practiced timed challenge: Brute-forcing 256 possible bytes for single-byte XOR (+5 pts)
+
+**Quality Points Total:** 20
+
+### 4. Category Focus Today
+- **Primary Specialty:** Cryptography - XOR (180 minutes)
+
+### 5. Reflection (Qualitative)
+**What went well today?**
+Successfully recovered the secret key `bl4ck_k3y` using the known `crypto{` prefix.
+
+**What challenged you?**
+Managing the alignment of a multi-byte key over a long hex string to prevent decoding errors.
+
+**Key learning:**
+Key length is the most critical factor in repeating-key XOR; if the length is wrong, the flag remains scrambled.
+
+**Tomorrow's focus:**
+Moving into the Mathematics category to start the Modular Arithmetic challenges (GCD, Extended GCD, and Modular Inverses).
