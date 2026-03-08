@@ -1,0 +1,41 @@
+# 📊 Individual Progress Scorecard - Day 2
+
+**Date:** February 11, 2026 | **Training Day:** 2/180
+
+### 1. Time Investment
+- [x] Training time today: 2.0 hours
+- [x] Goal met? Yes
+- [x] Consistency streak: 2 days
+
+**Points:** 10 points
+
+### 2. Challenge Completion
+| Difficulty | Challenges Solved | Points Earned |
+| :--- | :--- | :--- |
+| Easy | 1 (XOR Starter) | 5 |
+| Medium | 1 (XOR Properties) | 15 |
+| **Daily Total** | | **20** |
+
+### 3. Quality Indicators
+- [x] Created writeup for at least 1 challenge: XOR Properties logic (+10 pts)
+- [x] Reviewed 3+ writeups from others (+5 pts)
+- [x] Learned new technique/tool: XOR Algebraic Properties (Commutative/Associative) (+10 pts)
+
+**Quality Points Total:** 25
+
+### 4. Category Focus Today
+- **Primary Specialty:** Cryptography - XOR (100 minutes)
+- **Secondary Specialty:** Mathematics for Crypto (20 minutes)
+
+### 5. Reflection (Qualitative)
+**What went well today?**
+Applying the bitwise XOR operator to strings by converting them to Unicode integers first.
+
+**What challenged you?**
+The "XOR Properties" challenge, specifically rearranging the keys to isolate the flag.
+
+**Key learning:**
+The Self-Inverse property ($A \oplus A = 0$) allows you to cancel out specific keys in an encryption chain.
+
+**Tomorrow's focus:**
+Starting the advanced XOR puzzles, including single-byte and multi-byte repeating XOR ciphers.
