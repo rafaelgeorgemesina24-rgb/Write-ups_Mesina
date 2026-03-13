@@ -1,0 +1,21 @@
+Given the hexadecimal string:
+73626960647f6b206821204f21254f7d694f7624662065622127234f726927756d
+
+Instead of running a loop to try all 256 possible bytes, the first byte of the ciphertext can be compared to the first character of the expected flag ('c'). 
+Because XOR is a reversible operation, XORing the encrypted byte with the decrypted byte reveals the key.
+
+input_str = bytes.fromhex('73626960647f6b206821204f21254f7d694f7624662065622127234f726927756d')
+
+# Step 1: Recover the key using the first character 'c'
+# Ciphertext_byte ^ Plaintext_byte = Key
+key = input_str[0] ^ ord('c')
+
+# Step 2: Use the recovered key to decrypt the whole string
+flag = ''.join(chr(c ^ key) for c in input_str)
+
+print(flag)
+The Result:
+crypto{x0r_15_f0r_3v3ry0n3}
+
+Deduction: The first byte of the input is 0x73 (decimal 115). The ASCII value for 'c' is 99.The Math: $115 \oplus 99 = 16$. 
+This reveals that the "secret" key is 16.XOR Logic: In a single-byte XOR cipher, every character is shifted by the same value. Once the key for one character is found, the entire message is unlocked.
