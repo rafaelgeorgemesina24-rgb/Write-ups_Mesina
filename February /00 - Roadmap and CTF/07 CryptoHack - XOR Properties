@@ -1,0 +1,31 @@
+Given the hexadecimal strings below, three represent combinations of unknown keys ($KEY1, KEY2, KEY3$), 
+and the fourth represents the $FLAG$ XORed with all three keys.
+The Data:$KEY1 = \text{a6c8...}$$KEY2 \oplus KEY1 = \text{37dc...}$$KEY2 \oplus KEY3 = \text{c154...}$$FLAG \oplus KEY1 \oplus KEY3 \oplus KEY2 = \text{04ee...}$
+
+Based on the Self-Inverse ($A \oplus A = 0$) and Identity ($A \oplus 0 = A$) properties, the known values can be combined to "delete" 
+the keys:$$(FLAG \oplus KEY1 \oplus KEY3 \oplus KEY2) \oplus (KEY1) \oplus (KEY2 \oplus KEY3) = FLAG$$Since every key appears exactly twice in this equation, they cancel out to zero, leaving only the flag.
+
+from Crypto.Util.strxor import strxor
+
+# The given hex strings
+k1 = "a6c8b6733c9b22de7bc0253266a3867df55acde8635e19c73313"
+k2_k3 = "c1545756687e7573db23aa1c3452a098b71a7fbf0fddddde5fc1"
+flag_combined = "04ee9855208a2cd59091d04767ae47963170d1660df7f56f5faf"
+
+# Convert strings to bytes
+b_k1 = bytes.fromhex(k1)
+b_k2_k3 = bytes.fromhex(k2_k3)
+b_full = bytes.fromhex(flag_combined)
+
+# XOR the full combination with KEY1 and then with (KEY2 ^ KEY3)
+# Logic: FLAG ^ K1 ^ K2 ^ K3 ^ K1 ^ (K2 ^ K3) = FLAG
+result = strxor(strxor(b_full, b_k1), b_k2_k3)
+
+print(result.decode())
+
+The Result:
+crypto{x0r_i5_ass0c1at1v3}
+
+Commutative & Associative: These properties mean the order of XOR operations does not matter. It is not necessary to find $KEY2$ or $KEY3$ individually because the combined value $(KEY2 \oplus KEY3)$ is already provided.
+The "Double XOR" Effect: Because $A \oplus A = 0$, XORing a piece of data with the same key twice returns the original data. By XORing the final encrypted string with $KEY1$ and the combined $(KEY2 \oplus KEY3)$, the keys are neutralized.
+strxor: This is a function from the PyCryptodome library that performs a bitwise XOR on two byte-strings of equal length.
