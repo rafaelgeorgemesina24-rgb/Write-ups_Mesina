@@ -1,0 +1,22 @@
+A very large base-10 (decimal) integer is provided. To read the flag, this number must be converted back into its hexadecimal bytes, which then map to ASCII characters.
+
+The Integer:
+11515195063862318899931685488813747395775516287289682636499965282714637259206269
+
+from Crypto.Util.number import long_to_bytes
+
+# The large decimal integer
+n = 11515195063862318899931685488813747395775516287289682636499965282714637259206269
+
+# Convert the "long" integer back to bytes
+flag_bytes = long_to_bytes(n)
+
+# Print the decoded flag
+print(flag_bytes.decode())
+
+The Result:
+crypto{3nc0d1ng_4ll_th3_w4y_d0wn}
+
+Big Endian Encoding: When we convert a string like "HELLO" to a number, we treat the bytes as a sequence. The first letter occupies the most significant "place value.
+"The Math: Think of it like a very large base-256 number. Each character in the string is a "digit" in this base-256 system.Why use it? RSA and other public-key 
+cryptosystems rely on modular exponentiation (like $m^e \pmod n$). You cannot perform an exponent on the letter "H," but you can easily perform it on the number 72
