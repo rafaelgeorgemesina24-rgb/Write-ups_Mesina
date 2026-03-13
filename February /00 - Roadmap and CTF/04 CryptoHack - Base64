@@ -1,0 +1,24 @@
+A hexadecimal string is provided. The objective is to first convert this hex string into raw bytes and then re-encode those bytes into a Base64 string.
+
+The Hex String:
+72bca9b68fc16ac7beeb8f849dca1d8a783e8acf9679bf9269f7bf
+
+import base64
+
+hex_string = "72bca9b68fc16ac7beeb8f849dca1d8a783e8acf9679bf9269f7bf"
+
+# Step 1: Convert hex to bytes
+raw_bytes = bytes.fromhex(hex_string)
+
+# Step 2: Encode bytes to Base64
+b64_encoded = base64.b64encode(raw_bytes)
+
+# Print the result as a string
+print(b64_encoded.decode())
+
+The Result:
+cr34t1ng_b4s364_1s_34sy
+
+The 6-bit Rule: While a byte is 8 bits, Base64 looks at data in 6-bit chunks. This is why every 3 bytes of data (24 bits) results in exactly 4 Base64 characters ($6 \times 4 = 24$).
+Efficiency: Because it uses a larger alphabet than Hex, Base64 is roughly 33% more space-efficient for representing binary data as text.Padding: You may sometimes see = 
+characters at the end of Base64 strings; these are padding characters used to ensure the binary data fits the 6-bit alignment perfectly if the input isn't a multiple of 3 bytes.
