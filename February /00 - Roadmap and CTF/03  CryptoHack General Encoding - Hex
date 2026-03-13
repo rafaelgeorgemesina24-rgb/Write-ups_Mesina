@@ -1,0 +1,27 @@
+A long string of hexadecimal characters is provided. Every two characters in a hex string typically represent one byte of data.
+The goal is to convert this hex string back into its original byte format to reveal the flag.
+
+The Hex String:
+63727970746f7b596f755f77696c6c5f62655f776f726b696e675f776974685f6865785f737472696e67735f615f6c6f747d
+
+Python provides a built-in method, bytes.fromhex(), which automatically handles the conversion from a hex string to actual bytes.
+
+hex_string = "63727970746f7b596f755f77696c6c5f62655f776f726b696e675f776974685f6865785f737472696e67735f615f6c6f747d"
+
+# Convert hex to bytes
+flag_bytes = bytes.fromhex(hex_string)
+
+# Print the decoded result
+print(flag_bytes.decode())
+
+Base-16: Unlike our standard decimal system (Base-10), Hexadecimal uses 16 symbols. This is efficient for computers because one byte (8 bits) can be perfectly represented by exactly two hex digits (ranging from 00 to ff).
+
+From Hex to Text: The process follows a specific chain:
+
+Hex Pairs: 63
+
+Decimal Value: 99
+
+ASCII Character: c
+
+bytes.fromhex(): This function parses the string and groups the characters into pairs to create a bytes object. Using .decode() at the end turns those bytes into a standard Python string.
