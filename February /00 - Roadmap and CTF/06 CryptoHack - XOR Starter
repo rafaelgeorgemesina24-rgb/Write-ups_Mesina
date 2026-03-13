@@ -1,0 +1,20 @@
+The goal is to take the string "label", convert each character into its numerical ASCII/Unicode value, XOR each of those numbers with the integer 13, and then convert them back into characters.
+The Input:
+String: label
+XOR Key: 13
+
+data = "label"
+key = 13
+
+# XOR each character's ordinal value with 13 and convert back to char
+flag_content = "".join(chr(ord(c) ^ key) for c in data)
+
+# Wrap in the required flag format
+print(f"crypto{{{flag_content}}}")
+
+The Result:
+crypto{alibi}
+
+Bitwise Logic: XOR compares bits. If the bits are different (one is 0, one is 1), the result is 1. If they are the same, the result is 0.The Transformation: 
+1.  Take the character 'l'.2.  Find its ASCII value: 108.3.  Perform the math: $108 \oplus 13$.4.  Binary of 108: 11011005.  Binary of 13: 00011016. 
+Result: 1100001 (which is 97 in decimal).7.  chr(97) is the letter 'a'.Pwntools Shortcut: If you have pwntools installed, you can simply do xor("label", 13).
