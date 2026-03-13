@@ -1,0 +1,17 @@
+This is an entry-level task designed to confirm Python 3 is installed and running correctly. The challenge provides a script that performs a simple mathematical operation on a list of numbers to reveal a hidden string.
+
+The Problem
+Inside great_snakes.py, there is a list of integers that represent the flag in an encoded format:
+ords = [81, 64, 75, 66, 70, 93, 73, 72, 1, 92, 109, 2, 84, 109, 66, 75, 70, 90, 2, 92, 79]
+
+The script uses a Bitwise XOR operation (^) against the hex value 0x32 (which is the number 50 in decimal). It processes each number in the list, performs the math, and converts the result into a readable character.
+
+The solution is simply executing the provided script.
+
+Open a terminal or command prompt.
+
+Run the file using Python 3:
+python3 great_snakes.py
+
+The Output:
+crypto{SNAKE_EYES}
