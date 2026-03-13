@@ -1,0 +1,18 @@
+A list of decimal integers is provided, which corresponds to the ASCII values of a hidden flag. The task is to convert each integer into its readable character equivalent.
+[99, 114, 121, 112, 116, 111, 123, 65, 83, 67, 73, 73, 95, 112, 114, 49, 110, 116, 52, 98, 108, 51, 125]
+
+By using Python's built-in chr() function, each integer in the array can be mapped back to a character. A simple loop or join operation handles the entire list at once.
+
+# The input array
+ascii_list = [99, 114, 121, 112, 116, 111, 123, 65, 83, 67, 73, 73, 95, 112, 114, 49, 110, 116, 52, 98, 108, 51, 125]
+
+# Convert each number to a character and join them
+flag = "".join(chr(x) for x in ascii_list)
+
+print(flag)
+
+The Result:
+crypto{ASCII_pr1nt4bl3}
+
+chr(): This function takes an integer (ordinal) and returns the string character. For example, chr(99) returns 'c' and chr(123) returns '{'.
+ord(): This is the inverse function. If you run ord('A'), Python will return 65.
